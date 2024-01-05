@@ -53,9 +53,38 @@ public class Knightbook {
         // TODO #4: Finish this method so all members of the list are printed!
     }
 
+    /**
+     * @param firstName
+     * @return The first Person in list whose firstName variable matches.
+     * If no match is found, return null.
+     */
+    public Person find(String firstName) {
+        // TODO #5: Finish this method
+        return null;
+    }
+
     public static void main(String[] args) {
+        // Create a Knightbook object
         Knightbook k = new Knightbook();
         k.fillFromFile();
+
+        // Print all people in the list
         k.printAll();
+
+        // Prompt for a Person to search for:
+        System.out.println("Search by first name: ");
+        Scanner s = new Scanner(System.in);
+        String name = s.nextLine();
+
+        // If they are present, display their information.
+        Person p = k.find(name);
+        if (p == null) {
+            System.out.println("No match");
+        }
+        else {
+            System.out.println("Match found:");
+            System.out.println(p);
+        }
+
     }
 }
