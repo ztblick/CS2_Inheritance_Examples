@@ -31,7 +31,7 @@ public class Knightbook {
             String last = s.nextLine();
             int age = s.nextInt();
             // If the data is for a MenloStudent, construct a MenloStudent object
-            if (type.equals("Student")) {
+            if (type.equals("MenloStudent")) {
                 int grade = s.nextInt();
                 s.nextLine();
                 String advocate = s.nextLine();
